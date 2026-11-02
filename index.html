@@ -68,12 +68,11 @@
             background-color: #fafbfc;
         }
 
-        /* 절대 깨지지 않는 고화질 아이콘 이미지 스타일 */
-        .logo-img {
-            width: 64px;
-            height: 64px;
+        /* 깨지지 않는 선명한 대시보드 전용 이모지 아이콘 스타일 */
+        .emoji-icon {
+            font-size: 55px;
             margin-bottom: 15px;
-            object-fit: contain;
+            line-height: 1;
         }
 
         .card h2 {
@@ -90,35 +89,34 @@
 </head>
 <body>
 
-    <h1>📖 My Bible Dashboard</h1>
+    <h1>📘 My Bible Dashboard</h1>
 
     <div class="dashboard-grid">
         
-        <!-- 1. BibleGateway (안전한 이미지 링크로 변경) -->
+        <!-- 1. BibleGateway -->
         <a href="https://biblegateway.com" target="_blank" class="card">
-            <img src="https://icons8.com" class="logo-img" alt="BibleGateway">
+            <div class="emoji-icon">✝️</div>
             <h2>BibleGateway</h2>
             <p>다양한 번역본 및 검색</p>
         </a>
 
-        <!-- 2. 대한성서공회 (요청하신 파라미터가 모두 포함된 원본 주소 적용) -->
-        <a href="https://bskorea.or.kr" target="_blank" class="card">
-            <img src="https://icons8.com" class="logo-img" alt="대한성서공회">
+        <!-- 2. 대한성서공회 (요청하신 창세기 1:1 주소 원본 반영) -->
+        <a href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=gen&chap=1&sec=1&cVersion=&fontSize=15px&fontWeight=normal" target="_blank" class="card">
+            <div class="emoji-icon">⛪</div>
             <h2>대한성서공회</h2>
             <p>개역개정 창세기 1:1 바로 읽기</p>
         </a>
 
-        <!-- 3. Our Daily Bread (밀 이삭 그래픽 아이콘으로 통일) -->
+        <!-- 3. Our Daily Bread -->
         <a href="https://odb.org" target="_blank" class="card">
-            <img src="https://icons8.com" class="logo-img" alt="ODB">
+            <div class="emoji-icon">🌾</div>
             <h2>Our Daily Bread</h2>
             <p>매일의 양식 묵상 (ODB)</p>
         </a>
 
-        <!-- 4. 개인 설정 PDF (구글 드라이브나 웹에서 켜지는 PDF 링크 연동) -->
-        <!-- 아래 href="주소" 부분에 구글 드라이브 공유 링크를 넣으시면 인터넷에서 바로 열립니다! -->
-        <a href="https://google.com" target="_blank" class="card">
-            <img src="https://icons8.com" class="logo-img" alt="PDF">
+        <!-- 4. 개인 설정 PDF (보내주신 구글 드라이브 PDF 전용 주소 연동 완료) -->
+        <a href="https://drive.google.com/file/d/1MElKrPy0srBAPMnru9AzA8a0eMUQVIsR/view?usp=sharing" target="_blank" class="card">
+            <div class="emoji-icon">📁</div>
             <h2>개인 성경 자료 (PDF)</h2>
             <p>구글 드라이브 / 웹에서 열기</p>
         </a>
