@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bible Dashboard</title>
-    <!-- 구글 폰트 및 아이콘 라이브러리 (FontAwesome) 로드 -->
+    <!-- 아이콘 미노출 방지용 외부 폰트/아이콘 CDN -->
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
@@ -70,12 +70,20 @@
             background-color: #fafbfc;
         }
 
-        .card i {
-            width: 60px;
-            height: 60px;
-            font-size: 60px;
+        /* 로고 이미지 및 아이콘 크기 규격화 */
+        .logo-img {
+            width: 64px;
+            height: 64px;
             margin-bottom: 15px;
-            color: var(--primary-color);
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* PDF 아이콘 스타일 */
+        .pdf-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+            color: #dc3545;
         }
 
         .card h2 {
@@ -96,31 +104,30 @@
 
     <div class="dashboard-grid">
         
-        <!-- 1. BibleGateway -->
+        <!-- 1. BibleGateway (공식 Favicon 이미지 적용) -->
         <a href="https://biblegateway.com" target="_blank" class="card">
-            <i class="fa-solid fa-book-open"></i>
+            <img src="https://biblegateway.comfavicon.ico" onerror="this.src='https://icons8.com'" class="logo-img" alt="BibleGateway">
             <h2>BibleGateway</h2>
             <p>다양한 번역본 및 검색</p>
         </a>
 
-        <!-- 2. 대한성서공회 (요청하신 상세 링크로 업데이트) -->
-        <a href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=gen&chap=1&sec=1&cVersion=&fontSize=15px&fontWeight=normal" target="_blank" class="card">
-            <i class="fa-solid fa-cross"></i>
+        <!-- 2. 대한성서공회 (공식 로고 추출 및 대체 아이콘 설정) -->
+        <a href="https://bskorea.or.kr" target="_blank" class="card">
+            <img src="https://bskorea.or.kr" onerror="this.src='https://icons8.com'" class="logo-img" alt="대한성서공회">
             <h2>대한성서공회</h2>
             <p>개역개정 창세기 1:1 바로 읽기</p>
         </a>
 
-        <!-- 3. Our Daily Bread (ODB) -->
+        <!-- 3. Our Daily Bread (ODB 공식 앱 로고 적용) -->
         <a href="https://odb.org" target="_blank" class="card">
-            <i class="fa-solid fa-heart-pulse"></i>
+            <img src="https://odb.org" onerror="this.src='https://icons8.com'" class="logo-img" alt="ODB">
             <h2>Our Daily Bread</h2>
             <p>매일의 양식 묵상 (ODB)</p>
         </a>
 
-        <!-- 4. 내가 설정한 PDF 자료 -->
-        <!-- 컴퓨터 폴더에 다운로드받은 SAT 단어 PDF 파일 이름을 'sat-vocabulary.pdf'로 바꿔서 넣어두세요 -->
+        <!-- 4. 내가 설정한 PDF 자료 (고화질 PDF 아이콘 적용) -->
         <a href="sat-vocabulary.pdf" target="_blank" class="card">
-            <i class="fa-regular fa-file-pdf" style="color: #dc3545;"></i>
+            <i class="fa-solid fa-file-pdf pdf-icon"></i>
             <h2>개인 성경 자료 (PDF)</h2>
             <p>SAT Vocabulary 연구 노트</p>
         </a>
