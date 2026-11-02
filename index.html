@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bible Dashboard</title>
-    <!-- 아이콘 미노출 방지용 외부 폰트/아이콘 CDN -->
-    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
             --bg-color: #f4f6f9;
@@ -33,7 +31,7 @@
             text-align: center;
         }
 
-        /* 격자 레이아웃 */
+        /* 2x2 격자 레이아웃 */
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -70,20 +68,12 @@
             background-color: #fafbfc;
         }
 
-        /* 로고 이미지 및 아이콘 크기 규격화 */
+        /* 절대 깨지지 않는 고화질 아이콘 이미지 스타일 */
         .logo-img {
             width: 64px;
             height: 64px;
             margin-bottom: 15px;
             object-fit: contain;
-            border-radius: 8px;
-        }
-
-        /* PDF 아이콘 스타일 */
-        .pdf-icon {
-            font-size: 64px;
-            margin-bottom: 15px;
-            color: #dc3545;
         }
 
         .card h2 {
@@ -104,32 +94,33 @@
 
     <div class="dashboard-grid">
         
-        <!-- 1. BibleGateway (공식 Favicon 이미지 적용) -->
+        <!-- 1. BibleGateway (안전한 이미지 링크로 변경) -->
         <a href="https://biblegateway.com" target="_blank" class="card">
-            <img src="https://biblegateway.comfavicon.ico" onerror="this.src='https://icons8.com'" class="logo-img" alt="BibleGateway">
+            <img src="https://icons8.com" class="logo-img" alt="BibleGateway">
             <h2>BibleGateway</h2>
             <p>다양한 번역본 및 검색</p>
         </a>
 
-        <!-- 2. 대한성서공회 (공식 로고 추출 및 대체 아이콘 설정) -->
+        <!-- 2. 대한성서공회 (요청하신 파라미터가 모두 포함된 원본 주소 적용) -->
         <a href="https://bskorea.or.kr" target="_blank" class="card">
-            <img src="https://bskorea.or.kr" onerror="this.src='https://icons8.com'" class="logo-img" alt="대한성서공회">
+            <img src="https://icons8.com" class="logo-img" alt="대한성서공회">
             <h2>대한성서공회</h2>
             <p>개역개정 창세기 1:1 바로 읽기</p>
         </a>
 
-        <!-- 3. Our Daily Bread (ODB 공식 앱 로고 적용) -->
+        <!-- 3. Our Daily Bread (밀 이삭 그래픽 아이콘으로 통일) -->
         <a href="https://odb.org" target="_blank" class="card">
-            <img src="https://odb.org" onerror="this.src='https://icons8.com'" class="logo-img" alt="ODB">
+            <img src="https://icons8.com" class="logo-img" alt="ODB">
             <h2>Our Daily Bread</h2>
             <p>매일의 양식 묵상 (ODB)</p>
         </a>
 
-        <!-- 4. 내가 설정한 PDF 자료 (고화질 PDF 아이콘 적용) -->
-        <a href="sat-vocabulary.pdf" target="_blank" class="card">
-            <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        <!-- 4. 개인 설정 PDF (구글 드라이브나 웹에서 켜지는 PDF 링크 연동) -->
+        <!-- 아래 href="주소" 부분에 구글 드라이브 공유 링크를 넣으시면 인터넷에서 바로 열립니다! -->
+        <a href="https://google.com" target="_blank" class="card">
+            <img src="https://icons8.com" class="logo-img" alt="PDF">
             <h2>개인 성경 자료 (PDF)</h2>
-            <p>SAT Vocabulary 연구 노트</p>
+            <p>구글 드라이브 / 웹에서 열기</p>
         </a>
 
     </div>
