@@ -33,7 +33,7 @@
             text-align: center;
         }
 
-        /* 2x2 격자 레이아웃 (반응형) */
+        /* 격자 레이아웃 */
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -64,21 +64,18 @@
             justify-content: center;
         }
 
-        /* 마우스 올렸을 때 효과 */
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
             background-color: #fafbfc;
         }
 
-        /* 아이콘 스타일 */
-        .card i, .card img {
+        .card i {
             width: 60px;
             height: 60px;
             font-size: 60px;
             margin-bottom: 15px;
             color: var(--primary-color);
-            object-fit: contain;
         }
 
         .card h2 {
@@ -101,17 +98,16 @@
         
         <!-- 1. BibleGateway -->
         <a href="https://biblegateway.com" target="_blank" class="card">
-            <!-- 고유 로고가 없을 때를 대비한 성경 책 아이콘 -->
             <i class="fa-solid fa-book-open"></i>
             <h2>BibleGateway</h2>
             <p>다양한 번역본 및 검색</p>
         </a>
 
-        <!-- 2. 대한성서공회 -->
-        <a href="https://bskorea.or.kr" target="_blank" class="card">
+        <!-- 2. 대한성서공회 (요청하신 상세 링크로 업데이트) -->
+        <a href="https://www.bskorea.or.kr/bible/korbibReadpage.php?version=GAE&book=gen&chap=1&sec=1&cVersion=&fontSize=15px&fontWeight=normal" target="_blank" class="card">
             <i class="fa-solid fa-cross"></i>
             <h2>대한성서공회</h2>
-            <p>개역개정 및 성경 원문 조회</p>
+            <p>개역개정 창세기 1:1 바로 읽기</p>
         </a>
 
         <!-- 3. Our Daily Bread (ODB) -->
@@ -121,12 +117,12 @@
             <p>매일의 양식 묵상 (ODB)</p>
         </a>
 
-        <!-- 4. 내 설정 PDF -->
-        <!-- 개인 PDF 파일을 프로젝트 폴더 안에 'my-bible-study.pdf'라는 이름으로 저장해두면 열립니다 -->
-        <a href="my-bible-study.pdf" target="_blank" class="card">
+        <!-- 4. 내가 설정한 PDF 자료 -->
+        <!-- 컴퓨터 폴더에 다운로드받은 SAT 단어 PDF 파일 이름을 'sat-vocabulary.pdf'로 바꿔서 넣어두세요 -->
+        <a href="sat-vocabulary.pdf" target="_blank" class="card">
             <i class="fa-regular fa-file-pdf" style="color: #dc3545;"></i>
             <h2>개인 성경 자료 (PDF)</h2>
-            <p>내가 설정한 연구 및 묵상 노트</p>
+            <p>SAT Vocabulary 연구 노트</p>
         </a>
 
     </div>
